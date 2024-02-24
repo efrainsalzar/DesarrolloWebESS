@@ -1,0 +1,32 @@
+*{
+    margin: 5px 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+#subT{
+    
+    font-size: 18px;
+}
+.parrafo{
+    padding: 2px;
+}
+div{
+
+   align-items: center;
+   display: flex; 
+}
+img{
+    max-width: 500px;
+    width: 20%;
+    height: auto;
+    
+}
+a{
+    margin: 10px;
+}
+b{
+    margin: 0px;
+}
