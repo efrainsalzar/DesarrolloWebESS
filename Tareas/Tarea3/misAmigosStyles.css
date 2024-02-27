@@ -1,0 +1,44 @@
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/**/
+a:link, a:visited {
+    background-color: #f2f2f2;
+    color: black;
+    border: 2px solid rgb(14, 174, 196);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: rgb(14, 174, 196);
+    color: white;
+  }
