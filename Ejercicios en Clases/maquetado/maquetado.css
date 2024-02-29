@@ -59,7 +59,7 @@ img{
     padding: 0px 20px;
     border-bottom: 1px solid black;
     background: #2cee46;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .middle{
@@ -81,17 +81,23 @@ img{
     border-right: 1px solid black;
     width: 100px;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .center{
     border-right: 1px solid black;
     width: 700px;
 
 }
+.center > p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px 5px;
+}
 .derch{
     width: 100px;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .subt{
-    font-size: 22px;
+    font-size: 19px;
 }
 
