@@ -1,0 +1,97 @@
+.rojo{
+    color: red;
+    font-weight: normal;
+    font-size: 15px;
+}
+.amarillo{
+    color: yellow;
+    font-weight: normal;
+    
+}
+.verde{
+    color: green;
+    font-weight: normal;
+}
+.container{
+    width: 900px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.up{
+    display: flex;
+    background: #2cee46;
+}
+img{
+    width: 80px;
+    height: 100px;
+}
+.titulo{
+    padding: 0px 20px;
+
+}
+#imagen{
+    margin-left:115px;
+}
+.tituloU{
+    font-size: 21px;
+    padding-top: 10px;
+    color: rgb(218, 5, 5);
+    font-weight: bold;
+}
+.tituloU > span{
+    font-size: 28px;
+}
+.tituloF{
+    font-size: 19px;
+    color: rgb(53, 53, 211);
+    font-weight: bold;
+
+}
+.tituloF > span{
+    font-size: 26px;
+
+}
+.subtitulo{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border-bottom: 1px solid black;
+    background: #2cee46;
+
+}
+
+.middle{
+    border-bottom: 1px solid black;
+    height: 200px;
+    display: flex;
+}
+.down{
+    height: 100px;
+    background: rgb(118, 216, 255);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.izq{
+    border-right: 1px solid black;
+    width: 100px;
+    text-align: center;
+}
+.center{
+    border-right: 1px solid black;
+    width: 700px;
+
+}
+.derch{
+    width: 100px;
+    text-align: center;
+}
+.subt{
+    font-size: 22px;
+}
+
