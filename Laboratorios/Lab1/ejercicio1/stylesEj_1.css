@@ -13,7 +13,7 @@ body {
     margin: auto;
     width: 900px;
     height: auto;
-    border: 2px solid #000;
+    /*border: 2px solid #000;*/
 }
 
 .alumno{
@@ -99,11 +99,13 @@ body {
     width: 130px;
     background-color:#366F91;
     align-items:center;
-    border: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
 }
 
 .centro{
     width: 770px; 
+    border-left: 1px solid black;
 }
 h4{
     
