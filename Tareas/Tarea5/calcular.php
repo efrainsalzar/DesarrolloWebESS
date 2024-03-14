@@ -12,4 +12,5 @@
         case 'mayuscula': echo $op->mayusculas(); break;
         case 'minuscula': echo $op->minusculas(); break;
     }
+    
 ?>
