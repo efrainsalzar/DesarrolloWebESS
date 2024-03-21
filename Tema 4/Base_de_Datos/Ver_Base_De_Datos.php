@@ -1,0 +1,1 @@
+<meta http-equiv="refresh" content="1;url=Datos_BD/read.php">
