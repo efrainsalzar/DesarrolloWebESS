@@ -3,15 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="read_styles.css">
 <title>Tabla con estilos de borde en PHP</title>
-<style> 
-  table {border-collapse: collapse;}
-  th, td {padding: 8px;}
-
-</style>
 </head>
 <body>
-
 <?php
 include("db_connection.php");
 
@@ -28,7 +23,7 @@ if($result->num_rows > 0){
             <th>Sexo</th>
             <th>Edad</th>
             <th>Ocupacion</th>
-            <th colspan="2">Acción</th>
+            <th colspan="2">Actión</th>
         </tr>
         <?php
         while($row = $result->fetch_assoc()){
@@ -39,8 +34,8 @@ if($result->num_rows > 0){
                 <td><?php echo $row["sexo"]; ?></td>
                 <td><?php echo $row["edad"]; ?></td>
                 <td><?php echo $row["ocupacion"]; ?></td>
-                <td><a href="update.php">Editar</a></td>
-                <td><a href="delete.php">Borrar</a></td>
+                <td><a href="form_update.php?id=<?php echo $row['id'] ?>"><img src="images/edit1.png" alt=""></a></td>
+                <td><a href="delete.php?id=<?php echo $row['id'] ?>"><img src="images/delete.jpg" alt=""></a></td>
             </tr>
         <?php
         }
@@ -54,7 +49,8 @@ if($result->num_rows > 0){
 
 mysqli_close($conn);
 ?>
-<a href="form_insert.html">Crear nuevo</a>
+<br>
+<a class="crea" href="form_insert.html">Crear nuevo</a>
 
 </body>
 </html>
