@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pregunta2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="llamar.php" method="post">
+            <div>
+                <label for="palabra">Palabra:</label>
+                <input type="text" name="palabra" required pattern="[a-zA-Z]+">
+            </div>
+            <div class="option">
+                <label for="operacion">Accion:</label>
+                <select name="operacion">
+                    <option value="cuadrado">Cuadrado</option>
+                    <option value="diagonal">Diagonal</option>
+                </select>
+            </div>
+            <input type="submit" value="Vamos!">
+        </form>
+    </div>
+</body>
+</html>

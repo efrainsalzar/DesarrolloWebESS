@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pregunta2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="tabla.php" method="post">
+            <div class="option">
+                <label for="operacion">Operacion:</label>
+                <select name="operacion">
+                    <option value="suma">Sumar</option>
+                    <option value="resta">Restar</option>
+                    <option value="multiplicacion">Multiplicar</option>
+                    <option value="division">Dividir</option>
+                </select>
+                <label for="valorN">n:</label>
+                <input class="valor" type="number" name="valorN"  min="1" required>
+            </div>
+            <input class="boton" type="submit" value="Generar">
+        </form>
+    </div>
+</body>
+</html>

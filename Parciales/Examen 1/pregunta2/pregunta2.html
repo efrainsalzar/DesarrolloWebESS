@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos2p.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="calendariot.php" method="post">
+            <div class="option">
+                <label for="mes">Mes:</label>
+                <select name="mes">
+                    <option value="01">enero</option>
+                    <option value="02">febrero</option>
+                    <option value="03">marzo</option>
+                    <option value="04">abril</option>
+                    <option value="05">mayo</option>
+                    <option value="06">junio</option>
+                    <option value="07">julio</option>
+                    <option value="08">agosto</option>
+                    <option value="09">septiembre</option>
+                    <option value="10">octubre</option>
+                    <option value="11">noviembre</option>
+                    <option value="12">diciembre</option>
+                </select>
+                <label for="anio">año</label>
+                <input class="valor" type="number" name="anio"  min="1000" required>
+            </div>
+            
+                <label class="tam" for="tamano">tamaño:</label>
+                <input class="tama" type="number" name="tamano"  min="1" required>
+                <input class="boton" type="submit" value="Generar">
+        </form>
+    </div>
+</body>
+</html>

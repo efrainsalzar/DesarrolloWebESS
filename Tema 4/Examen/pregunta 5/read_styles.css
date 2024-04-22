@@ -1,0 +1,29 @@
+* {
+    font-family: Arial;
+}
+
+
+table {
+    
+    border-collapse: collapse;
+    margin-left: 20%;
+}
+
+th{
+    /*background: rgb(17, 17, 136);
+    color: white;*/
+    font-size: 15px;
+}
+tr:nth-child(even) {
+    background-color: #b7d3f5;
+}
+td {
+    padding: 12px;
+    padding-right: 50px;
+}
+
+
+img {
+    width: 60px;
+}
+
