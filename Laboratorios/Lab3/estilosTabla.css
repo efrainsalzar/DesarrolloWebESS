@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.l2{
+    margin-left: 250px;
+}
+.l3{
+    margin-left: 70px;
+}
+.l4{
+    margin-left: 70px;
+}
+.l5{
+    margin-left: 150px;
+}
+.l6{
+    margin-left: 30px;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, #ffffff, #a19f9f);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+div {
+    margin-bottom: 10px;
+}
