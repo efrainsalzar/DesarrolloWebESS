@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simple</title>
+    <style>
+        #resultado {
+            display: inline-block;
+            border: 2px solid red;
+            padding: 50px;
+            font-size: 24px;
+            margin: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <label for="valor1">Valor 1:</label>
+    <input type="number" id="a"><br>
+
+    <label for="valor2">Valor 2:</label>
+    <input type="number" id="b"><br>
+
+    <label for="operacion">Operación:</label>
+    <select id="operacion" onchange="calcular()">
+        <option value="sumar">Sumar</option>
+        <option value="restar">Restar</option>
+        <option value="multiplicar">Multiplicar</option>
+        <option value="dividir">Dividir</option>
+    </select><br>
+
+    <div id="resultado">
+
+    </div>
+
+    <script>
+        function calcular() {
+            const valor1 = parseFloat(document.getElementById("a").value);
+            const valor2 = parseFloat(document.getElementById("b").value);
+            const operacion = document.getElementById("operacion").value;
+            let resultado;
+
+            switch (operacion) {
+                case "sumar":
+                    resultado = valor1 + valor2;
+                    break;
+                case "restar":
+                    resultado = valor1 - valor2;
+                    break;
+                case "multiplicar":
+                    resultado = valor1 * valor2;
+                    break;
+                case "dividir":
+                    if (valor2 === 0) {
+                        resultado = "No se puede dividir por cero";
+                    } else {
+                        resultado = valor1 / valor2;
+                    }
+                    break;
+                default:
+                    resultado = "Operación no válida";
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
