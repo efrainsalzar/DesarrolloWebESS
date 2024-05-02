@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ecuación Cuadrática</title>
+    <style>
+        .resultado {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+        }
+        .complejo {
+            color: red;
+        }
+        input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ecuación Cuadrática</h1>
+    <input type="number" id="a"> <label for="a">x^2 +</label>
+    <input type="number" id="b"> <label for="b">x +</label>
+    <input type="number" id="c"> <label for="c">= 0</label><br><br>
+    <button onclick="calcularRaices()">Calcular Raíces</button>
+    <div id="resultados"></div>
+
+    <script>
+        function calcularRaices() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+            var discriminante = b * b - 4 * a * c;
+            var resultadosDiv = document.getElementById("resultados");
+            resultadosDiv.innerHTML = "";
+
+            if (discriminante > 0) {
+                var x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                var x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+                resultadosDiv.innerHTML += '<div class="resultado">x1 = ' + x1.toFixed(2) + '</div>';
+                resultadosDiv.innerHTML += '<div class="resultado">x2 = ' + x2.toFixed(2) + '</div>';
+            } else if (discriminante === 0) {
+                var x = -b / (2 * a);
+                resultadosDiv.innerHTML += '<div class="resultado">x = ' + x.toFixed(2) + '</div>';
+            } else {
+                var realPart = (-b / (2 * a)).toFixed(2);
+                var imaginaryPart = (Math.sqrt(-discriminante) / (2 * a)).toFixed(2);
+                resultadosDiv.innerHTML += '<div class="resultado complejo">x1 = ' + realPart + ' + ' + imaginaryPart + 'i</div>';
+                resultadosDiv.innerHTML += '<div class="resultado complejo">x2 = ' + realPart + ' - ' + imaginaryPart + 'i</div>';
+            }
+        }
+    </script>
+</body>
+</html>
