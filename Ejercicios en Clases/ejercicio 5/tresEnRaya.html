@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tresEnRaya.css">
+    <title>tresEnRaya</title>
+</head>
+<body>
+    <div class="container">
+        <button id="b1" onClick="verJ(1)"></button>
+        <button id="b2" onClick="verJ(2)"></button>
+        <button id="b3" onClick="verJ(3)"></button>
+        <button id="b4" onClick="verJ(4)"></button>
+        <button id="b5" onClick="verJ(5)"></button>
+        <button id="b6" onClick="verJ(6)"></button>
+        <button id="b7" onClick="verJ(7)"></button>
+        <button id="b8" onClick="verJ(8)"></button>
+        <button id="b9" onClick="verJ(9)"></button>
+    </div>
+    <br><br>
+    <label id="accion">Jugador 1</label>
+
+    <script>
+        var turno = 1;
+        var jugador = document.getElementById("accion");
+        function verJ(x){
+            //console.log(x);
+            
+            var boton = document.getElementById("b"+x);
+            console.log(boton);
+            if(boton.value === ""){
+                if(turno === 1){
+                    boton.innerHTML="x";
+                    jugador.innerHTML="Jugador 1";
+                    turno = 2;
+                }
+                else{
+                    boton.innerHTML="o";
+                    jugador.innerHTML="Jugador 2";
+                    turno = 1;
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
