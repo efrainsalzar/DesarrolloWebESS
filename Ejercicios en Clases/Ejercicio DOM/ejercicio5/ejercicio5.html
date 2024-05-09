@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="c1" placeholder="Cosme Fulanito">
+        <span id="error1" style="color:red;"></span>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="c2" placeholder="Ejemplo@gmail.com">
+        <span id="error2" style="color:red;"></span>
+        <br>
+        <label for="mensaje">Mensaje:</label>
+        <input type="text" id="c3" placeholder="Un mesajito ;)">
+        <span id="error3" style="color:red;"></span>
+        <br>
+        <button id="validar" onclick="validarCampos()">Enviar</button>
+    </div>
+    <script>
+        function validarCampos() {
+            var campos = document.getElementsByTagName("input");
+            var vacios = [];
+
+            // Reiniciar mensajes de error
+            var errores = document.getElementsByTagName("span");
+            for (var i = 0; i < errores.length; i++) {
+                errores[i].textContent = "";
+            }
+
+            for (i = 0; i < campos.length; i++) {
+                if (campos[i].value === "") {
+                    vacios.push(campos[i].id);
+                    var error = document.getElementById("error" + (i + 1));
+                    error.textContent = "Este campo es obligatorio.";
+                }
+            }
+
+            if (vacios.length > 0) {
+                // No se muestra el mensaje genérico ya que los mensajes de error están en los spans
+            } else {
+                alert("Todo okey");
+            }
+        }
+    </script>
+</body>
+</html>

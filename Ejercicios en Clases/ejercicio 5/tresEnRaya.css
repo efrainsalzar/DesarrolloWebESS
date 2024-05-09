@@ -1,6 +1,4 @@
-.container{
-    /*border: 1px solid black;*/
-}
+
 #b1{
     grid-area: uno;
 }
@@ -47,10 +45,10 @@
 @media (min-width:100px){
     .container{
         grid-template:
-        "uno  dos  tres"  50px
-        "cuatro  cinco  seis" 50px
-        "siete  ocho  nueve"  50px /
-        50px 50px 50px   
+        "uno     dos    tres"   50px
+        "cuatro  cinco  seis"   50px
+        "siete   ocho   nueve"  50px /
+        50px     50px   50px   
         ;
     }
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> texto añadido por enter </h1>
+
+        <label for="">TEXTO</label>
+       <input type="text"  id="parrafo">
+    
+    </div>
+
+<div id="contenido"> 
+
+</div>
+
+<script>
+    document.getElementById("parrafo").addEventListener("keypress", (e)=>{
+        console.log(e.key);
+     if(e.key === "Enter"){
+            var elemento = document.createElement("p");
+            elemento.innerHTML = document.getElementById("parrafo").value;
+            document.getElementById("contenido").appendChild(elemento);
+
+        }
+    })
+</script>
+
+</body>
+</html>

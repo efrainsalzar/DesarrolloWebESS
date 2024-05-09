@@ -33,11 +33,13 @@
             if(boton.value === ""){
                 if(turno === 1){
                     boton.innerHTML="x";
+                    boton.style.color = "red";
                     jugador.innerHTML="Jugador 1";
                     turno = 2;
                 }
                 else{
                     boton.innerHTML="o";
+                    boton.style.color = "blue";
                     jugador.innerHTML="Jugador 2";
                     turno = 1;
                 }
