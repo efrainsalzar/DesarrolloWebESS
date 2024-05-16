@@ -1,0 +1,22 @@
+*{
+    font-size: 15px;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.imgg{
+    display: flex;
+    justify-content: center;
+}
+img{
+    
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+button{
+    margin-left: 10px;
+}

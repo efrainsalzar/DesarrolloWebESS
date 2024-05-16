@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        margin-left: 50px;
+        font-size: 15px;
+        width: 80px;
+        height: 40px;
+    }
+    button{
+        margin-left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background: rgb(73, 146, 224);
+        border: none;
+        border: 1px solid black;
+        color: white;
+    }
+</style>
+<body>
+    <span>Elemento Lista</span>
+    <input type="text" id="listaCompras">
+    <button onclick="agregarElemento()">Agregar</button>
+    <div>
+        <ul id="lista">
+
+        </ul>
+    </div>
+
+    <script>
+
+document.getElementById("listaCompras").addEventListener("keypress",(e)=>{
+            //console.log(e.key)
+            if(e.key === "Enter"){
+                agregarElemento();
+                document.getElementById("listaCompras").value="";
+            }
+        })
+        function agregarElemento(){
+            var compra = document.getElementById("listaCompras").value
+            var lista = document.getElementById("lista")
+            const elemento = document.createElement('li');
+            elemento.innerHTML = compra;
+            if(compra.includes('de')){
+                elemento.style.background = "yellow"
+            }
+            lista.appendChild(elemento);        
+            
+        }
+    </script>
+</body>
+</html>

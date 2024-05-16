@@ -37,12 +37,13 @@
                 if (campos[i].value === "") {
                     vacios.push(campos[i].id);
                     var error = document.getElementById("error" + (i + 1));
-                    error.textContent = "Este campo es obligatorio.";
+                    error.textContent = "Este campo es obligatorio";
                 }
             }
 
             if (vacios.length > 0) {
                 // No se muestra el mensaje genérico ya que los mensajes de error están en los spans
+                alert("Faltan llenar valores");
             } else {
                 alert("Todo okey");
             }

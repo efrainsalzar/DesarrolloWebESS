@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 1</title>
+</head>
+<style>
+    table {
+        border: 2px solid black;
+        border-collapse: collapse;
+        margin-top: 10px;
+        width: 50%;
+    }
+    td {
+        border: 1px solid rgb(183, 179, 179);
+        padding: 5px;
+    }
+    .titulo {
+        background-color: rgb(123, 125, 168);
+    }
+</style>
+<body>
+    <button id="mostrar">Mostrar</button>
+    <button id="añadir">Añadir</button>
+    <div id="formulario" style="display: none;">
+        <label for="nombre">Nombre y Apellido:</label>
+        <input type="text" id="nombre" required>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required>
+        <label for="materia">Materia:</label>
+        <input type="text" id="materia" required>
+        <label for="nota">Nota:</label>
+        <input type="number" id="nota" min="0" max="100" required>
+        <button id="guardar">Guardar</button>
+    </div>
+    <div id="lista"></div>
+
+    <script>
+        const lista = document.getElementById('lista');
+        const boton = document.getElementById('mostrar');
+        const añadirBoton = document.getElementById('añadir');
+        const formulario = document.getElementById('formulario');
+
+        añadirBoton.addEventListener('click', () => {
+            formulario.style.display = 'block';
+        });
+
+        const guardar = document.getElementById('guardar');
+        guardar.addEventListener('click', () => {
+            const nombre = document.getElementById('nombre').value;
+            const edad = document.getElementById('edad').value;
+            const materia = document.getElementById('materia').value;
+            const nota = document.getElementById('nota').value;
+
+            const nuevoEstudiante = {
+                ApellidosNombres: nombre,
+                Edad: edad,
+                Materia: materia,
+                Nota: nota
+            };
+
+            enviarDatosNuevoEstudiante(nuevoEstudiante);
+
+            formulario.style.display = 'none';
+            document.getElementById('nombre').value = '';
+            document.getElementById('edad').value = '';
+            document.getElementById('materia').value = '';
+            document.getElementById('nota').value = '';
+        });
+
+        function enviarDatosNuevoEstudiante(nuevoEstudiante) {
+            fetch('lista.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(nuevoEstudiante).toString()
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                mostrarTabla(data);
+            })
+            .catch(error => console.error(error));
+        }
+
+        boton.addEventListener('click', async () => {
+            await fetch('lista.php')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                mostrarTabla(data);
+            })
+            .catch(error => console.error(error));
+        });
+
+        function mostrarTabla(data) {
+            let pares = 0;
+            lista.innerHTML = `
+                <table>
+                    <tr class="titulo">
+                        <td>Nro</td>
+                        <td>Nombre Y Apellido</td>
+                        <td>Edad</td>
+                        <td>Materia</td>
+                        <td>Nota</td>
+                    </tr>
+                </table>
+            `;
+            const tabla = document.querySelector('table');
+            for (let elemento of data) {
+                tabla.innerHTML += `
+                    <tr>
+                        <td>${elemento.Nro}</td>
+                        <td>${elemento.ApellidosNombres}</td>
+                        <td>${elemento.Edad}</td>
+                        <td>${elemento.Materia}</td>
+                        <td>${elemento.Nota}</td>
+                    </tr>
+                `;
+                if (elemento.Nro % 2 == 0) {
+                    tabla.rows[elemento.Nro].style.backgroundColor = 'rgb(183, 179, 179)';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

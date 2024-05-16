@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont">
+        
+        <input type="number" id="tamano" placeholder="45 pixeles">
+        <button onclick="agrandar()">Agrandar</button>
+        <button onclick="reducir()">Reducir</button>
+    </div>
+    <div class="imgg">
+        
+        <img src="img/ninos-mates-01-z.jpg" alt="imagen" id="imagen" width="400px">
+    </div>
+
+</body>
+
+<script>
+    function agrandar(){
+        var tamano = parseInt(document.getElementById("tamano").value)
+        var img = document.getElementById("imagen").width += tamano
+    }
+    function reducir(){
+        var tamano = parseInt(document.getElementById("tamano").value)
+        var img = document.getElementById("imagen").width -= tamano
+    }
+    
+
+</script>
+</html>

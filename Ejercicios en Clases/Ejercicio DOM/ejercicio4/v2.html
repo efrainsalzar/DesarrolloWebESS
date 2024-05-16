@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .imagen {
+            width: 100px;
+            padding: 5px;
+            transition: width 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <img src="imagenes/barcelona.png" class="imagen" id="img1">
+        <img src="imagenes/barcelona.png" class="imagen" id="img2">
+        <img src="imagenes/barcelona.png" class="imagen" id="img3">
+        <img src="imagenes/barcelona.png" class="imagen" id="img4">
+        <img src="imagenes/barcelona.png" class="imagen" id="img5">
+        <img src="imagenes/barcelona.png" class="imagen" id="img6">
+        <img src="imagenes/barcelona.png" class="imagen" id="img7">
+        <img src="imagenes/barcelona.png" class="imagen" id="img8">
+        <img src="imagenes/barcelona.png" class="imagen" id="img9">
+    </div>
+
+    <script>
+        let images = document.getElementsByClassName('imagen');
+
+        for (let i = 0; i < images.length; i++) {
+            images[i].addEventListener('mouseover', function() {
+                images[i].style.width = "200px";
+            });
+
+            images[i].addEventListener('mouseleave', function() {
+                images[i].style.width = "100px";
+            });
+        }
+    </script>
+</body>
+</html>

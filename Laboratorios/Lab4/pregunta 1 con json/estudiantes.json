@@ -1,0 +1,58 @@
+[
+    {
+        "Nro": 1,
+        "ApellidosNombres": "Juan Perez",
+        "Edad": 25,
+        "Materia": "SIS-256",
+        "Nota": 81
+    },
+    {
+        "Nro": 2,
+        "ApellidosNombres": "Ricardo Luna",
+        "Edad": 30,
+        "Materia": "SIS-258",
+        "Nota": 70
+    },
+    {
+        "Nro": 3,
+        "ApellidosNombres": "Teresa Tomasa",
+        "Edad": 26,
+        "Materia": "SIS-256",
+        "Nota": 84
+    },
+    {
+        "Nro": 4,
+        "ApellidosNombres": "Favian Umbre",
+        "Edad": 24,
+        "Materia": "SIS-258",
+        "Nota": 70
+    },
+    {
+        "ApellidosNombres": "Aut vitae deserunt d",
+        "Edad": "65",
+        "Materia": "Ut sed esse minima ",
+        "Nota": "56",
+        "Nro": 5
+    },
+    {
+        "ApellidosNombres": "Aperiam dolores sed ",
+        "Edad": "60",
+        "Materia": "Est incididunt iste ",
+        "Nota": "72",
+        "Nro": 6
+    },
+    {
+        "ApellidosNombres": "Corrupti fugiat occ",
+        "Edad": "67",
+        "Materia": "Porro est corporis e",
+        "Nota": "21",
+        "Nro": 7
+    },
+    {
+        "ApellidosNombres": "Et id quia cupidita",
+        "Edad": "74",
+        "Materia": "Qui eligendi officia",
+        "Nota": "6",
+        "Nro": 8
+    }
+]
