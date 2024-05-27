@@ -28,7 +28,7 @@
         
     ?>
         <div>
-        <input type="file" name="fotografia<?php echo $i; ?>">
+        <input type="file" name="fotografia<?php echo $i; ?>" require>
         <input type="text" name="nombre<?php echo $i; ?>">
         <input type="text" name="apellido<?php echo $i; ?>">
         <input type="text" name="cu<?php echo $i; ?>">
