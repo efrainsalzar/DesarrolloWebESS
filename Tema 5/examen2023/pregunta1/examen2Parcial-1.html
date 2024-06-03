@@ -8,6 +8,11 @@
     <script src="script.js"></script>
 </head>
 <body>
+
+    
+    <div id="contenidoUsuario">
+        
+    </div>
     <div class="contenido">
         <div class="principal-menu">
             <div id="principal"></div>
@@ -15,8 +20,13 @@
         </div>
         <div class="menu-mensaje">
             <button id="bmenu" onclick="mostrarBotones()">Menu</button>
+            <button id="bmenu" onclick="cerrarSesion()">cerrar</button>
             <div id="mensaje"></div>
         </div>
     </div>
+
+    <script>
+        verificarUsuario();
+    </script>
 </body>
 </html>
