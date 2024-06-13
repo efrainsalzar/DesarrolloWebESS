@@ -195,6 +195,19 @@ function preguntaCinco(){
     ajax.send();
 
 }
+function preguntaCincoConFetch() {
+    var datos = document.getElementById('sub-menu');
+    
+    fetch('form_calendario.php')
+        .then(response => response.text())
+        .then(html => {
+            datos.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
 
 function obtenerCalendario(){
 
